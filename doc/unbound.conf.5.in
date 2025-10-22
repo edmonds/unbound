@@ -2000,6 +2000,12 @@ its subqueries from recursion. It is not reset during the resolution. When
 it is exceeded the query is failed and the lookup process stops.
 Default is 128.
 .TP 5
+.B iter\-scrub\-promiscuous: \fI<yes or no>
+Should the iterator scrubber remove promiscuous NS from positive answers.
+This protects against poisonous contents, that could affect names in the
+same zone as a spoofed packet.
+Default is yes.
+.TP 5
 .B fast\-server\-permil: \fI<number>
 Specify how many times out of 1000 to pick from the set of fastest servers.
 0 turns the feature off.  A value of 900 would pick from the fastest
